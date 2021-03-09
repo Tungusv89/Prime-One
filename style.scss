@@ -1,229 +1,235 @@
-    /*Обнуление*/
-    
-    * {
-        padding: 0;
-        margin: 0;
-        border: 0;
+/*Обнуление*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ :focus,
+ :active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+/*--------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@font-face {
+    font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
+    src: url('fonts/AkzidenzGroteskBQ-BdCnd.eot');
+    src: url('/fonts/AkzidenzGroteskBQ-BdCnd.woff') format('woff'), url('fonts/AkzidenzGroteskBQ-BdCnd.ttf') format('ttf'), url('fonts/AkzidenzGroteskBQ-BdCnd.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_Bebas-Regular';
+    src: url('fonts/Bebas-Regular.eot');
+    src: url('/fonts/Bebas-Regular.woff') format('woff'), url('fonts/Bebas-Regular.ttf') format('ttf'), url('fonts/Bebas-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 880px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/*header*/
+
+header {
+    padding: 29px 0 33px 0;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-top-lang {
+    display: flex;
+}
+
+.header-top-lang__item {
+    display: block;
+    line-height: 19px;
+    color: #000;
+    font-family: 'Conv_Bebas-Regular';
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0px 4px;
+    margin: 0 10px 0 0;
+}
+
+.header-top-lang__item.active {
+    color: #fff;
+    background-color: #000;
+}
+
+.header-top__link {
+    font-size: 15px;
+    font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.header-bottom {
+    margin: -14px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-bottom__column {
+    flex: 0 0 33.333%;
+}
+
+.header-bottom-menu {
+    &--right {
+        .header-bottom-menu__list {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+            li {
+                display: inline-block;
+                margin: 0 0 0 45px;
+                &:first-child {
+                    margin: 0;
+                }
+                &:last-child {
+                    margin: 0 0 0 45px;
+                }
+            }
+        }
     }
-    
-    *,
-    *:before,
-    *:after {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+}
+
+.header-bottom-menu__list {
+    display: flex;
+    li {
+        margin: 0px 45px 0px 0px;
+        &:last-child {
+            margin: 0 0 0 0;
+        }
     }
-    
-     :focus,
-     :active {
-        outline: none;
-    }
-    
-    a:focus,
-    a:active {
-        outline: none;
-    }
-    
-    nav,
-    footer,
-    header,
-    aside {
-        display: block;
-    }
-    
-    html,
-    body {
-        height: 100%;
-        width: 100%;
-        font-size: 100%;
-        line-height: 1;
-        font-size: 14px;
-        -ms-text-size-adjust: 100%;
-        -moz-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-    }
-    
-    input,
-    button,
-    textarea {
-        font-family: inherit;
-    }
-    
-    input::-ms-clear {
-        display: none;
-    }
-    
-    button {
-        cursor: pointer;
-    }
-    
-    button::-moz-focus-inner {
-        padding: 0;
-        border: 0;
-    }
-    
-    a,
-    a:visited {
-        text-decoration: none;
-    }
-    
-    a:hover {
-        text-decoration: none;
-    }
-    
-    ul li {
-        list-style: none;
-    }
-    
-    img {
-        vertical-align: top;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-size: inherit;
-        font-weight: inherit;
-    }
-    /*--------------------*/
-    
-    @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
-    @font-face {
-        font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
-        src: url('fonts/AkzidenzGroteskBQ-BdCnd.eot');
-        src: url('/fonts/AkzidenzGroteskBQ-BdCnd.woff') format('woff'), url('fonts/AkzidenzGroteskBQ-BdCnd.ttf') format('ttf'), url('fonts/AkzidenzGroteskBQ-BdCnd.svg') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Conv_Bebas-Regular';
-        src: url('fonts/Bebas-Regular.eot');
-        src: url('/fonts/Bebas-Regular.woff') format('woff'), url('fonts/Bebas-Regular.ttf') format('ttf'), url('fonts/Bebas-Regular.svg') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    body {
-        font-family: 'PT Sans', sans-serif;
-        font-size: 15px;
-    }
-    
-    .container {
-        max-width: 880px;
-        margin: 0 auto;
-        width: 100%;
-    }
-    /*header*/
-    
-    header {
-        padding: 29px 0 33px 0;
-    }
-    
-    .header-top {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .header-top-lang {
-        display: flex;
-    }
-    
-    .header-top-lang__item {
-        display: block;
-        line-height: 19px;
-        color: #000;
-        font-family: 'Conv_Bebas-Regular';
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 0px 4px;
-        margin: 0 10px 0 0;
-    }
-    
-    .header-top-lang__item.active {
-        color: #fff;
-        background-color: #000;
-    }
-    
-    .header-top__link {
-        font-size: 15px;
-        font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
-        text-transform: uppercase;
-        color: #000000;
-        text-decoration: underline;
-    }
-    
-    .header-bottom {
-        margin: -14px 0 0 0;
-        display: flex;
-        align-items: center;
-    }
-    
-    .header-bottom__column {
-        flex: 0 0 33.333%;
-    }
-    
-    .header-bottom-menu {}
-    
-    .header-bottom-menu--right.header-bottom-menu__list {
-        margin: 0;
-        display: flex;
-        text-align: right;
-    }
-    
-    .header-bottom-menu--right.header-bottom-menu__list li {
-        display: inline-block;
-        padding: 0;
-    }
-    
-    .header-bottom-menu:last-child {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .header-bottom-menu__list {
-        margin: 0px -22.5px;
-        display: flex;
-    }
-    
-    .header-bottom-menu__list li {
-        padding: 0 22.5px;
-    }
-    
-    .header-bottom-menu__list li:last-child {
-        margin: 0;
-    }
-    
-    .header-bottom-menu__link {
-        font-size: 15px;
-        font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
-        color: #000000;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-    }
-    
-    .header-bottom__collumn {}
-    
-    .header-logo {
-        display: block;
-        text-align: center;
-    }
-    
-    .header-logo__text {
-        display: block;
-        font-family: 'Conv_Bebas-Regular';
-        font-size: 10px;
-        text-transform: uppercase;
-        letter-spacing: 8px;
-        color: #000000;
-    }
-    
-    .header-logo__image {
-        display: inline-block;
-        margin: 13px 0 22px 0;
-    }
-    /*--------------------*/
+}
+
+.header-bottom-menu__link {
+    font-size: 15px;
+    font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.header-bottom__collumn {}
+
+.header-logo {
+    display: block;
+    text-align: center;
+}
+
+.header-logo__text {
+    display: block;
+    font-family: 'Conv_Bebas-Regular';
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: #000000;
+}
+
+.header-logo__image {
+    display: inline-block;
+    margin: 13px 0 22px 0;
+}
+
+
+/*--------------------*/
