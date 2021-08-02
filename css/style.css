@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*Переменные*/
+/*--------------------*/
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 * {
@@ -90,6 +92,35 @@ h6 {
 }
 
 /*--------------------*/
+/*Оболочка*/
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/*-----Оболочка------*/
+/*Основная сетка*/
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 892px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+/*---Основная сетка---*/
 @font-face {
   font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
   src: url("fonts/AkzidenzGroteskBQ-BdCnd.eot");
@@ -163,7 +194,7 @@ header {
 }
 
 .header-bottom {
-  margin: -14px 0 0 0;
+  margin: -10px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,7 +210,7 @@ header {
 }
 
 .header-bottom-menu--right .header-bottom-menu__list {
-  margin: 0;
+  margin: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,30 +221,37 @@ header {
 }
 
 .header-bottom-menu--right .header-bottom-menu__list li {
-  margin: 0 0 0 45px;
+  margin: 0px 0px 0px 45px !important;
 }
 
 .header-bottom-menu--right .header-bottom-menu__list li:first-child {
   margin: 0;
 }
 
-.header-bottom-menu--right .header-bottom-menu__list li:last-child {
-  margin: 0 0 0 45px;
+@media (max-width: 892px) {
+  .header-bottom-menu--right .header-bottom-menu__list li {
+    margin: 0px 0px 0px 20px !important;
+  }
 }
 
 .header-bottom-menu__list {
-  margin: 0 -22.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .header-bottom-menu__list li {
-  padding: 0 22.5px;
+  margin: 0px 45px 0px 0px;
 }
 
 .header-bottom-menu__list li:last-child {
-  margin: 0 0 0 0;
+  margin: 0px 0px 0px 0px;
+}
+
+@media (max-width: 892px) {
+  .header-bottom-menu__list li {
+    margin: 0px 20px 0px 0px !important;
+  }
 }
 
 .header-bottom-menu__link {
@@ -244,4 +282,50 @@ header {
 }
 
 /*--------------------*/
-/*# sourceMappingURL=style.css.map */
+.header-menu__icon {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .header-menu__icon {
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .header-menu__icon span {
+    -webkit-animation: anim(0.3s, 0s);
+            animation: anim(0.3s, 0s);
+    top: 8px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .header-menu__icon span:first-child {
+    top: 0px;
+  }
+  .header-menu__icon span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+  .header-menu__icon.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header-menu__icon.active span:first-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 8px;
+  }
+  .header-menu__icon.active span:last-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: 8px;
+  }
+}
