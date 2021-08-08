@@ -103,6 +103,9 @@ h6 {
 
 /*--------------------*/
 
+
+
+
 /*Оболочка*/
 .wrapper{
     width: 100%;
@@ -158,10 +161,13 @@ header {
 
 .header-top {
     display: flex;
-    justify-content: space-between;
-    padding: 15px 0px 0px 0px;
+    justify-content: space-between;    
     @media (max-width:$md2+px) {
-        justify-content: flex-end;        
+        justify-content: flex-end;
+        padding: 25px 0px 0px 0px;        
+    }
+    @media (max-width:$md4+px) {
+        padding: 15px 0px 0px 0px;
     }
 }
 
@@ -206,6 +212,9 @@ header {
     display: flex;
     align-items: center;
     @media (max-width:$md2+px) {
+        margin: -37px 0px 0px 0px;
+    }
+    @media (max-width:$md4+px) {
         margin: -27px 0px 0px 0px;
     }
 }
@@ -323,7 +332,7 @@ header {
     .header-menu__icon {
         display: block;
         position: absolute;
-        top: 18px;
+        top: 41px;
         left: 10px;
         width: 30px;
         height: 18px;
@@ -363,4 +372,112 @@ header {
             left: 0;
         }
     }
+}
+
+@media (max-width:$md4+px) {
+    .header-menu__icon {
+        top: 30px;
+    }
+}
+
+.btn {
+    height: 50px;
+    line-height: 50px;
+    background-color: #000;
+    display: inline-block;
+    padding: 0px 33px;
+    font-size: 15px;
+    font-family: 'Conv_Bebas-Regular';
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    &--w{
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+//block_1
+
+.ibg{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    }
+    
+.ibg img{    
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    }
+
+.privat {
+    display: flex;
+    background-color: #000;
+}
+.privat__column {
+    flex: 0 0 50%;
+    @media (max-width:$md2+px) {
+        flex: 1 1 100%;
+        &:first-child{
+            display: none;
+        }        
+    }
+}
+.privat__image {
+    height: 100%;
+}
+.privat-body {
+    padding: 75px 20px 75px 60px;
+    @media (max-width:$md1+px) {
+        padding: 30px 20px 30px 30px;
+    }
+}
+.privat-body-content {
+    max-width: 305px;
+}
+.privat-body__title {
+    font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0px 0px 30px 0px;
+    @media (max-width:$md1+px) {
+        font-size: 35px;
+        margin: 0px 0px 20px 0px;
+    }
+}
+.privat-body__text {
+    font-size: 15px;
+    line-height: 25px;
+    color: #fff;
+    margin: 0px 0px 50px 0px;
+    @media (max-width:$md1+px) {        
+        margin: 0px 0px 30px 0px;
+    }
+}
+.privat-body-buttons {
+    display: flex;
+    align-items: center;
+}
+.privat-body-buttons__items {
+}
+.btn {
+}
+.btn--w {
+}
+.privat-body-buttons__link {
+    font-family: 'Conv_Bebas-Regular';
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: underline;
+    margin: 0px 0px 0px 15px;
+    letter-spacing: 1.5px;
 }
