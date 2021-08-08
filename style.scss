@@ -117,9 +117,10 @@ h6 {
     max-width: $mw+px;
     margin: 0 auto;
     width: 100%;
+    padding:0 10px;
     // @media (max-width: $md1+px){max-width: 970px;}
     @media (max-width: $md1+px){max-width: 750px;}
-    @media (max-width: $md3+px){max-width: none;padding:0 10px;}
+    @media (max-width: $md2+px){max-width: none;padding:0 10px;}
 }
 /*---Основная сетка---*/
 
@@ -145,26 +146,30 @@ body {
     font-size: 15px;
 }
 
-.container {
-    max-width: 880px;
-    margin: 0 auto;
-    width: 100%;
-}
-
 
 /*header*/
 
 header {
     padding: 29px 0 33px 0;
+    @media (max-width:$md2+px) {
+        padding: 18px 0 33px 0;
+    }
 }
 
 .header-top {
     display: flex;
     justify-content: space-between;
+    padding: 15px 0px 0px 0px;
+    @media (max-width:$md2+px) {
+        justify-content: flex-end;        
+    }
 }
 
 .header-top-lang {
     display: flex;
+    @media (max-width:$md2+px) {
+        margin: 0px 0px 15px 0px;
+    }
 }
 
 .header-top-lang__item {
@@ -184,17 +189,25 @@ header {
 }
 
 .header-top__link {
+    position: relative;
+    z-index: 11;
     font-size: 15px;
     font-family: 'Conv_AkzidenzGroteskBQ-BdCnd';
     text-transform: uppercase;
     color: #000000;
     text-decoration: underline;
+    @media (max-width:$md4+px) {
+        font-size: 12px;
+    }
 }
 
 .header-bottom {
-    margin: -10px 0 0 0;
+    margin: -10px 0px 0px 0px;
     display: flex;
     align-items: center;
+    @media (max-width:$md2+px) {
+        margin: -27px 0px 0px 0px;
+    }
 }
 
 .header-bottom__column {
@@ -216,6 +229,16 @@ header {
                     margin: 0px 0px 0px 20px !important;
                 }
             }
+            @media (max-width:$md2+px) {
+                display: block;
+                text-align: left;
+                li {
+                    margin: 0px 0px 15px 0px !important;
+                    &:last-child{
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+            }
         }
     }
 }
@@ -227,6 +250,15 @@ header {
             margin: 0px 20px 0px 0px !important;
         }
     }
+    @media (max-width:$md2+px) {
+        display: block;
+        li {
+            margin: 0px 0px 15px 0px !important;
+            &:last-child{
+                margin: 0px 0px 0px 0px;
+            }
+        }
+    }
 }
 
 .header-bottom-menu__link {
@@ -235,11 +267,16 @@ header {
     color: #000000;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    @media (max-width:$md4+px) {
+        font-size: 13px;
+    }
 }
 
 // .header-bottom__column {}
 
 .header-logo {
+    position: relative;
+    z-index: 11;
     display: block;
     text-align: center;
 }
@@ -251,11 +288,29 @@ header {
     text-transform: uppercase;
     letter-spacing: 8px;
     color: #000000;
+    @media (max-width:$md2+px) {
+        font-size: 8px;
+    }
+    @media (max-width:$md4+px) {
+        letter-spacing: 5px;
+    }
 }
 
 .header-logo__image {
     display: inline-block;
     margin: 13px 0 22px 0;
+    @media (max-width:$md2+px) {
+        margin: 2px 0px 5px 0px;
+        img {
+            width: 150px;
+        }
+    }
+    @media (max-width:$md4+px) {
+        margin: 0px 0px 2px 0px;
+        img {
+            width: 100px;
+        }
+    }
 }
 
 /*--------------------*/
@@ -290,6 +345,22 @@ header {
             &:first-child{transform: rotate(-45deg);top: 8px;}
             &:last-child{transform: rotate(45deg); bottom: 8px;}
         }
+        }
+    }
+    .header-menu {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        left: -120%;
+        top: 0;
+        background-color: #fff;
+        padding: 65px 10px 0px 10px;
+        animation-timing-function: ease;
+        animation-duration: 0.6s;
+        animation-delay: 0s;        
+        &.active {
+            left: 0;
         }
     }
 }
